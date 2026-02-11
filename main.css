@@ -1,0 +1,157 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+} 
+
+body {
+  background-color: #1a0404d4;
+  display: grid;
+  justify-content: center;
+  
+
+}
+
+.all {
+  display: grid;
+  background-image: url(fon.jpg);
+  place-items: center;
+  min-height: 100dvh;
+  max-width: 1000px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.5);
+  padding-bottom: 4rem;
+  
+}
+.biography {
+  display: grid;
+  place-items: center;
+  max-width: min(500px,95%);
+  width: 100%;
+  margin-top: 1.5%;
+  box-shadow: 0px 0px 15px 15px rgb(2, 2, 2);
+  background-color: black;
+  color: rgb(207, 227, 245);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.biography img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  
+}
+.biography h2 {
+  margin: 1.5%;
+  font-family: "Cinzel", serif;
+  font-weight:700;
+  text-align: center;
+  font-size: 2rem;
+}
+.biography p {
+  margin: 2%;
+  font-family: "Cinzel", serif;
+  text-align: center;
+  font-weight:400;
+  font-size: 1rem;
+}
+.links h1 {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  font-weight:900;
+  color: rgb(207, 227, 245);
+  font-size: 2.7rem;
+  -webkit-text-stroke: 5px black;
+  paint-order: stroke fill;
+}
+.links {
+  display: grid;
+  place-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+.link {
+  display: grid;
+  border: 2.5px solid #000;
+  margin: 2em;
+  width: 100%;
+  border-radius: 50px;
+  background-color: transparent;
+  max-height: 65px;
+  height: 100%;
+  grid-template-columns: 1fr 4fr 1fr  ;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(207, 227, 245);
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  font-weight:600;
+  transition: all 0.4s ease;
+  place-items: center;
+}
+
+.link img {
+  display: grid;
+  grid-column: 3;
+  place-items: center;
+  
+}
+.Telegram img {
+  max-width: 2.6rem;
+  max-height: 2.6rem;
+}
+.Twitch img {
+  max-width: 3rem;
+  max-height: 3rem;
+}
+
+.TikTok img {
+  max-width: 2.7rem;
+  max-height: 2.7rem;
+}
+.instagram img {
+  max-width: 2.4rem;
+  max-height: 2.4rem;
+}
+.YouTube img {
+  max-width: 3.4rem;
+  max-height: 3.4rem;
+}
+.link span {
+    grid-column: 1;
+}
+.link p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    color: rgb(207, 227, 245);
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
+}
+
+.link:hover {
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    
+    transform: translateY(-3px) scale(1.02);
+    
+    box-shadow: 0 0 20px 25px rgba(7, 4, 4, 0.75);
+  }
+
+@media (max-width: 768px) {
+    .biography, .links {
+        max-width: 95%; 
+        width: 95%;
+    }
+    
+    .link {
+        grid-template-columns: 1fr 2fr 1fr; /
+    }
+}
